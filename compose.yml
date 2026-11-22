@@ -5,6 +5,8 @@ services:
     image: ramaniroja/automation:db
     ports:
       - "3306:3306"
+    deploy:
+      repicas: 3
    
     networks:
       - mynetwork
@@ -13,6 +15,8 @@ services:
     image: ramaniroja/automation:app
     ports:
       - "1111:8080"
+    deploy:
+      repicas: 3
     
     depends_on:
       - devopsdb
